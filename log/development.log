@@ -1,0 +1,8 @@
+Started GET "/" for 127.0.0.1 at 2021-01-22 17:27:24 +0100
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/kamwa/.rvm/gems/ruby-2.7.2/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/kamwa/.rvm/gems/ruby-2.7.2/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 105.3ms | Allocations: 400)
+Completed 200 OK in 276ms (Views: 182.3ms | ActiveRecord: 0.0ms | Allocations: 4795)
+
+
