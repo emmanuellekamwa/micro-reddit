@@ -218,3 +218,73 @@ Processing by LinksController#index as HTML
 Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 1.3ms | Allocations: 4216)
 
 
+Started GET "/links" for 127.0.0.1 at 2021-01-22 18:17:36 +0100
+  [1m[35m (19.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (17.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 151.9ms | Allocations: 4337)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1046ms (Views: 909.7ms | ActiveRecord: 19.3ms | Allocations: 11971)
+
+
+Started GET "/links" for 127.0.0.1 at 2021-01-22 18:17:52 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 909)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 72.8ms | ActiveRecord: 0.2ms | Allocations: 4267)
+
+
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210122172032)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210122172032"]]
+  [1m[35m (29.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-01-22 18:42:29 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 11.6ms | Allocations: 196)
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 262.6ms | Allocations: 5914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 555ms (Views: 462.4ms | ActiveRecord: 1.3ms | Allocations: 18390)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-01-22 18:43:07 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"A0LRbpyRtnO3cAtUZldzNHnb/k6JgO7za4oVtNkekWUPQxk0wGdPNcpr95tWqVcJ8AmSlmA6eK3CIb3i7qWzwQ==", "user"=>{"email"=>"emmanuellekamwa@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "emmanuellekamwa@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (5.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "emmanuellekamwa@gmail.com"], ["encrypted_password", "$2a$12$yU.4Ifc6jZTbyfpEl64Jce1O0lA4OrhbTQVEKE4sVpcIuc4l.UAmy"], ["created_at", "2021-01-22 17:43:08.663613"], ["updated_at", "2021-01-22 17:43:08.663613"]]
+  [1m[35m (28.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 955ms (ActiveRecord: 34.3ms | Allocations: 13064)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-22 18:43:08 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.5ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 73.6ms | Allocations: 3908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 112.4ms | ActiveRecord: 1.6ms | Allocations: 8185)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
