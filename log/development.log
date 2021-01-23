@@ -288,3 +288,273 @@ Completed 200 OK in 129ms (Views: 112.4ms | ActiveRecord: 1.6ms | Allocations: 8
   [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-01-22 19:06:56 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 4313)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 4.4ms | Allocations: 8023)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>MicroReddit</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-# {name}") %>
+     <% end %>
+  
+  <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to 'Submit link', new_link_path %></li>
+        <li><%= link_to 'Account', edit_user_registration_path %></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, :method :delete  %></li>
+      </ul>
+     <% else %>
+      <ul>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+      </ul>
+     <% end %>
+
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>MicroReddit</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <% flash.each do |name, msg| %>
+14:          <%= content_tag(:div, msg, class: "alert alert-# {name}") %>
+15:         <% end %>
+16:      
+17:      <% if user_signed_in? %>
+18:          <ul>
+19:            <li><%= link_to 'Submit link', new_link_path %></li>
+20:            <li><%= link_to 'Account', edit_user_registration_path %></li>
+21:            <li><%= link_to 'Sign out', destroy_user_session_path, :method :delete  %></li>
+22:          </ul>
+23:         <% else %>
+24:          <ul>
+25:            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+26:            <li><%= link_to 'Sign in', new_user_session_path %></li>
+27:          </ul>
+28:         <% end %>
+29:    
+30:        <%= yield %>
+31:      </body>
+32:    </html>
+  
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:21: syntax error, unexpected ':', expecting ')'
+Started GET "/" for 127.0.0.1 at 2021-01-22 19:09:00 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1161)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.2ms | Allocations: 3700)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>MicroReddit</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-# {name}") %>
+     <% end %>
+  
+  <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to 'Submit link', new_link_path %></li>
+        <li><%= link_to 'Account', edit_user_registration_path %></li>
+        <li><%= link_to 'Sign out', destroy_user_session_path, :method 
+        => :delete  %></li>
+      </ul>
+     <% else %>
+      <ul>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign in', new_user_session_path %></li>
+      </ul>
+     <% end %>
+
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>MicroReddit</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <% flash.each do |name, msg| %>
+14:          <%= content_tag(:div, msg, class: "alert alert-# {name}") %>
+15:         <% end %>
+16:      
+17:      <% if user_signed_in? %>
+18:          <ul>
+19:            <li><%= link_to 'Submit link', new_link_path %></li>
+20:            <li><%= link_to 'Account', edit_user_registration_path %></li>
+21:            <li><%= link_to 'Sign out', destroy_user_session_path, :method 
+22:            => :delete  %></li>
+23:          </ul>
+24:         <% else %>
+25:          <ul>
+26:            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+27:            <li><%= link_to 'Sign in', new_user_session_path %></li>
+28:          </ul>
+29:         <% end %>
+30:    
+31:        <%= yield %>
+32:      </body>
+33:    </html>
+  
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+app/views/layouts/application.html.erb:22: syntax error, unexpected =>, expecting ')'
+Started GET "/" for 127.0.0.1 at 2021-01-22 19:09:25 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 1.8ms | Allocations: 17532)
+
+
+  
+ActionView::Template::Error (undefined method `stringify_keys' for :method:Symbol):
+    18:       <ul>
+    19:         <li><%= link_to 'Submit link', new_link_path %></li>
+    20:         <li><%= link_to 'Account', edit_user_registration_path %></li>
+    21:         <li><%= link_to 'Sign out', destroy_user_session_path, :method 
+    22:          :delete  %></li>
+    23:       </ul>
+    24:      <% else %>
+  
+app/views/layouts/application.html.erb:21
+Started GET "/" for 127.0.0.1 at 2021-01-23 09:45:34 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (1.1ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 254ms (Views: 226.2ms | ActiveRecord: 8.6ms | Allocations: 6705)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-01-23 09:48:00 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CDTbtFDjzVMBCGU+qU9IeQYEPn3yIpEXi7YXa2ia8VYENRPuDBU0FXwTmfGZsWxEj9ZSpRuYB0kiHb89XyHT8g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 386ms (ActiveRecord: 0.2ms | Allocations: 4515)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-23 09:48:01 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.2ms | Allocations: 4415)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-01-23 09:48:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 12.4ms | Allocations: 589)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 491.8ms | Allocations: 3129)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 555ms (Views: 522.6ms | ActiveRecord: 0.0ms | Allocations: 8016)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-01-23 09:48:11 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jNOkus54hGpheDH93GRs52RKlrBGyI25P5AzKhcTc70PW11Hw39hHsJtldMD9Ta60uimNoQ7Y6tQqiLD/haNeg==", "user"=>{"email"=>"emmanuellekamwa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (258.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "emmanuellekamwa@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (36.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2021-01-23 08:48:12.634460"], ["updated_at", "2021-01-23 08:48:12.634886"], ["id", 1]]
+  [1m[35m (42.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 922ms (ActiveRecord: 336.8ms | Allocations: 11217)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-23 09:48:12 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  Rendered links/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:17
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.4ms | Allocations: 5262)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLink Load (4.3ms)[0m  [1m[34mSELECT "links".* FROM "links" ORDER BY "links"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToLinks (20210123090028)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "links" ADD "user_id" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_links_on_user_id" ON "links" ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (9.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210123090028"]]
+  [1m[35m (37.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
