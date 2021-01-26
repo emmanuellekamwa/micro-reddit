@@ -713,3 +713,886 @@ Processing by LinksController#index as HTML
 Completed 200 OK in 131ms (Views: 128.1ms | ActiveRecord: 1.8ms | Allocations: 6509)
 
 
+Started GET "/" for 127.0.0.1 at 2021-01-23 13:21:06 +0100
+  [1m[35m (32.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (16.8ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (50.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 437.4ms | Allocations: 13368)
+Completed 500 Internal Server Error in 10052ms (ActiveRecord: 69.2ms | Allocations: 181017)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_including_tag' for #<#<Class:0x000056295dd39e38>:0x00007fb8e049f548>
+Did you mean?  javascript_include_tag):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_including_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-23 13:23:38 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (53.6ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 119.5ms | Allocations: 3295)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 53.9ms | Allocations: 16582)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-23 13:25:29 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 3006)
+Completed 500 Internal Server Error in 471ms (ActiveRecord: 0.6ms | Allocations: 18161)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-24 22:05:41 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.8ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 193.0ms | Allocations: 13370)
+Completed 500 Internal Server Error in 969ms (ActiveRecord: 11.3ms | Allocations: 36642)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 09:01:04 +0100
+  [1m[35m (64.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (10.8ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 174.3ms | Allocations: 3328)
+Completed 500 Internal Server Error in 1047ms (ActiveRecord: 20.0ms | Allocations: 16804)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 10:34:30 +0100
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (10.8ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 1708.7ms | Allocations: 3300)
+Completed 500 Internal Server Error in 5057ms (ActiveRecord: 21.3ms | Allocations: 16738)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 10:35:49 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 73.9ms | Allocations: 3257)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.4ms | Allocations: 16683)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 10:39:45 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 100.6ms | Allocations: 3247)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.5ms | Allocations: 16237)
+
+
+  
+ActionView::Template::Error (The asset "default.js" is not present in the asset pipeline.
+):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag :default, 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 10:40:45 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 45.6ms | Allocations: 3246)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.5ms | Allocations: 16661)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 11:06:43 +0100
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (1.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 146.6ms | Allocations: 13378)
+Completed 500 Internal Server Error in 1296ms (ActiveRecord: 16.3ms | Allocations: 42973)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application' %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 17:24:08 +0100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 133.7ms | Allocations: 13367)
+Completed 500 Internal Server Error in 662ms (ActiveRecord: 9.0ms | Allocations: 36639)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 17:27:27 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (31.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 125.1ms | Allocations: 3294)
+Completed 500 Internal Server Error in 607ms (ActiveRecord: 32.0ms | Allocations: 16777)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-25 17:28:18 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 57.6ms | Allocations: 3246)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.6ms | Allocations: 16661)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 09:08:20 +0100
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.9ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 217.9ms | Allocations: 13379)
+Completed 500 Internal Server Error in 1116ms (ActiveRecord: 16.8ms | Allocations: 36652)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 09:08:37 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 46.5ms | Allocations: 3046)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.5ms | Allocations: 15309)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 09:20:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 76.8ms | Allocations: 3293)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 10.9ms | Allocations: 11218)
+
+
+  
+ActionView::Template::Error (The asset "default.css" is not present in the asset pipeline.
+):
+    2: <html>
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'default', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2021-01-26 10:54:37 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (44.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 98.4ms | Allocations: 3042)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 45.7ms | Allocations: 9756)
+
+
+  
+ActionView::Template::Error (The asset "default.css" is not present in the asset pipeline.
+):
+    2: <html>
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'default', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+  
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2021-01-26 10:56:23 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (1.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 212.7ms | Allocations: 3246)
+Completed 500 Internal Server Error in 1467ms (ActiveRecord: 1.6ms | Allocations: 16233)
+
+
+  
+ActionView::Template::Error (The asset "applicationss.js" is not present in the asset pipeline.
+):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'applicationss', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 10:57:23 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 55.5ms | Allocations: 3246)
+Completed 500 Internal Server Error in 416ms (ActiveRecord: 0.5ms | Allocations: 16663)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:04:12 +0100
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (16.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 248.7ms | Allocations: 13368)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 26.2ms | Allocations: 17372)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Raddit</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true async: true, defer: true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-inner">
+        <div class="container">
+          <div id="logo" class="navbar-brand"><%= likn_to "Raddit", root_path %></div>
+          <nav class="collapse navbar-collapse navbar-ex1-collapse">
+            <% if user_signed_in? -%>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to 'Submit link', new_link_path %></li>
+                <li><%= link_to 'Account', edit_user_registration_path %></li>
+                <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+              </ul>
+          <% else -%>
+              <ul class="nav navbar-nav pull-right">
+                <li><%= link_to 'Sign up', new_user_registration_path %></li>
+                <li><%= link_to 'Sign in', new_user_session_path %></li>
+              </ul>
+          <% end -%>
+          </nav>
+        </div>
+      </div>
+    </header>
+  <div id="main-content" class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+     <% end %>
+  
+  <div id="content" class="col-md-9 center-block">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Raddit</title>
+5:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+6:        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true async: true, defer: true %>
+7:        <%= csrf_meta_tags %>
+8:      </head>
+9:    
+10:      <body>
+11:        <header class="navbar navbar-default" role="navigation">
+12:          <div class="navbar-inner">
+13:            <div class="container">
+14:              <div id="logo" class="navbar-brand"><%= likn_to "Raddit", root_path %></div>
+15:              <nav class="collapse navbar-collapse navbar-ex1-collapse">
+16:                <% if user_signed_in? -%>
+17:                  <ul class="nav navbar-nav navbar-right">
+18:                    <li><%= link_to 'Submit link', new_link_path %></li>
+19:                    <li><%= link_to 'Account', edit_user_registration_path %></li>
+20:                    <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+21:                  </ul>
+22:              <% else -%>
+23:                  <ul class="nav navbar-nav pull-right">
+24:                    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+25:                    <li><%= link_to 'Sign in', new_user_session_path %></li>
+26:                  </ul>
+27:              <% end -%>
+28:              </nav>
+29:            </div>
+30:          </div>
+31:        </header>
+32:      <div id="main-content" class="container">
+33:        <% flash.each do |name, msg| %>
+34:          <%= content_tag(:div, msg, class: "alert alert-info") %>
+35:         <% end %>
+36:      
+37:      <div id="content" class="col-md-9 center-block">
+38:              <%= yield %>
+39:            </div>
+40:          </div>
+41:        </div>
+42:      </body>
+43:    </html>
+  
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+app/views/layouts/application.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/layouts/application.html.erb:6: Can't assign to true
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:06:15 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 52.8ms | Allocations: 3294)
+Completed 500 Internal Server Error in 966ms (ActiveRecord: 0.6ms | Allocations: 25025)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:27:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (10.1ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 3042)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 19.8ms | Allocations: 15262)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:30:27 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 49.3ms | Allocations: 2998)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 3.7ms | Allocations: 15216)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:33:11 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (75.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 151.9ms | Allocations: 2998)
+Completed 500 Internal Server Error in 740ms (ActiveRecord: 75.7ms | Allocations: 11458)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:38:17 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (405.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 1627.6ms | Allocations: 2989)
+Completed 500 Internal Server Error in 7272ms (ActiveRecord: 418.8ms | Allocations: 20781)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:44:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (31.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 85.8ms | Allocations: 3029)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 41.5ms | Allocations: 15238)
+
+
+  
+ActionView::Template::Error (application.js):
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+    9: 
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:46:25 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 51.3ms | Allocations: 2987)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.5ms | Allocations: 10404)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2021-01-26 12:53:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 3029)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.8ms | Allocations: 9480)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2021-01-26 13:02:44 +0100
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (2.0ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 155.4ms | Allocations: 13367)
+Completed 500 Internal Server Error in 1078ms (ActiveRecord: 14.4ms | Allocations: 27497)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2021-01-26 13:10:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 3077)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.8ms | Allocations: 12423)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
+Started GET "/" for 127.0.0.1 at 2021-01-26 13:11:18 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:20
+  Rendered links/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 2987)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 0.4ms | Allocations: 13580)
+
+
+  
+ActionView::Template::Error (link_directory argument must be a directory):
+  
+app/assets/config/manifest.js:3
