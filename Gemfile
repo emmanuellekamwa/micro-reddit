@@ -5,6 +5,7 @@ ruby '2.7.2'
 #Add userauthentication withDevise gem
 gem 'devise', '~> 4.7', '>= 4.7'
 gem 'coffee-script-source', '1.8.0'
+gem 'acts_as_votable', '~> 0.11.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
