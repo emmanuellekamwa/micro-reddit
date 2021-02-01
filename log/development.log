@@ -3810,3 +3810,246 @@ ActionView::Template::Error (undefined local variable or method `f' for #<#<Clas
     45: </div>
   
 app/views/devise/registrations/edit.html.erb:43
+Started GET "/users/edit" for 127.0.0.1 at 2021-02-01 09:42:08 +0100
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___1210020641441419566_29720 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 439.5ms | Allocations: 4444)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1127ms (Views: 993.3ms | ActiveRecord: 2.0ms | Allocations: 33211)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2021-02-01 09:42:34 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___1210020641441419566_29720 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 20.8ms | Allocations: 1415)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 181ms (Views: 158.4ms | ActiveRecord: 0.3ms | Allocations: 10166)
+
+
+Started PUT "/users" for 127.0.0.1 at 2021-02-01 10:08:37 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"KsgInvVyJ6gs6QXa1E1FZTYMNgop83juyr2egsW+B5Tu/ZNpNU9N3HeJksCOcPtqZHn9ol10j5X5Dj2QS0S6hw==", "user"=>{"name"=>"Kamwa Emmanuelle Alix", "email"=>"emmanuellekamwa@gmail.com", "password"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (18.3ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = ?, "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$12$GQp/WBLNowu/OiPCVFqLV.rkZBWSXqAlbdDThxjC6lmIzEw3AaeMK"], ["name", "Kamwa Emmanuelle Alix"], ["updated_at", "2021-02-01 09:08:38.476585"], ["id", 1]]
+  [1m[35m (29.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1034ms (ActiveRecord: 49.1ms | Allocations: 13249)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-01 10:08:38 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 250.5ms | Allocations: 15470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 433ms (Views: 320.9ms | ActiveRecord: 10.3ms | Allocations: 26424)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-01 10:18:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 149.1ms | Allocations: 8623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 299ms (Views: 283.8ms | ActiveRecord: 7.1ms | Allocations: 17981)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-02-01 10:18:13 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"29SG9Fy7CqIx9h0g0x33VinUemuGEtBaZJ3dZRah524f4R0DnIZg1mqWijqJIElZe6Gxw/KVJyFXLn53mFtafQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (9.0ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-02-01 09:18:14.185743"], ["id", 1]]
+  [1m[35m (22.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 31.7ms | Allocations: 8689)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-01 10:18:14 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 148.0ms | Allocations: 8302)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 257ms (Views: 244.5ms | ActiveRecord: 8.8ms | Allocations: 15636)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-02-01 10:18:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_new_html_erb___2392079459471219436_30720 at /home/kamwa/micro-reddit/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (Duration: 9.2ms | Allocations: 509)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 176.1ms | Allocations: 2247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 242ms (Views: 239.6ms | ActiveRecord: 0.0ms | Allocations: 10826)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-02-01 10:18:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 198)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 87.8ms | Allocations: 1400)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 167ms (Views: 160.0ms | ActiveRecord: 0.0ms | Allocations: 9519)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-02-01 10:18:26 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"DudEq9PvashR37oUnA9VQLYl67//8mvqDKb1u4t6xsVUwogR6C5POKZ40sznX6wem5ej+X0RKI3bM4cwwHlPeA==", "user"=>{"email"=>"emmanuellekamwa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "emmanuellekamwa@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (4.3ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2021-02-01 09:18:27.243099"], ["updated_at", "2021-02-01 09:18:27.243567"], ["id", 1]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 661ms (ActiveRecord: 17.7ms | Allocations: 10311)
+
+
+Started GET "/" for 127.0.0.1 at 2021-02-01 10:18:27 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 82.9ms | Allocations: 8308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 172ms (Views: 168.3ms | ActiveRecord: 2.6ms | Allocations: 16568)
+
+
