@@ -3130,3 +3130,683 @@ puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.7) lib/puma/server.rb:472:in `process_client'
 puma (4.3.7) lib/puma/server.rb:328:in `block in run'
 puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToUsers (20210129074440)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (12.7ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (6.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210129074440"]]
+  [1m[35m (31.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:08:13 +0100
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:14:05 +0100
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:14:06 +0100
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:14:06 +0100
+Processing by LinksController#index as HTML
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.4ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:12
+  ↳ app/views/links/index.html.erb:17
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:17
+  ↳ app/views/links/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:5
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:12
+  ↳ app/views/links/index.html.erb:17
+  Rendered links/index.html.erb within layouts/application (Duration: 612.6ms | Allocations: 31804)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  Rendered links/index.html.erb within layouts/application (Duration: 644.3ms | Allocations: 32529)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 1989ms (Views: 1864.0ms | ActiveRecord: 64.3ms | Allocations: 75281)
+
+
+Completed 200 OK in 2105ms (Views: 1907.6ms | ActiveRecord: 18.1ms | Allocations: 77193)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:14:37 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_30580 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5937.8ms | Allocations: 344419)
+Completed 500 Internal Server Error in 5990ms (ActiveRecord: 0.3ms | Allocations: 347655)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000558a55a36800>:0x0000558a55a119d8>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:16:16 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.3ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  Rendered links/index.html.erb within layouts/application (Duration: 156.2ms | Allocations: 8350)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 240ms (Views: 223.0ms | ActiveRecord: 14.3ms | Allocations: 16628)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-01-29 09:16:21 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g8TMFSEoKkV+Z55fUFjv6e5kk+RRCWTcDytzTMAG5alxtPHuB3LnkD93WSDqwosy0tZItiUAD2H4qMNTubnx1A=="}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (9.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-01-29 08:16:21.379088"], ["id", 1]]
+  [1m[35m (36.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 52.5ms | Allocations: 9017)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:16:21 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (2.7ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  Rendered links/index.html.erb within layouts/application (Duration: 198.9ms | Allocations: 8293)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 289ms (Views: 270.2ms | ActiveRecord: 15.1ms | Allocations: 15715)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-01-29 09:16:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 20.8ms | Allocations: 590)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 60.7ms | Allocations: 1931)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 130.7ms | ActiveRecord: 0.0ms | Allocations: 10088)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-01-29 09:16:30 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+FBxW/HZoRMbt85hLmZ1t26OmKFRFH4aZVGViyspWRCL4pDYIQ20NCG0vpSQxN2yfA5I7ofDvc1oFuB4sTJpHg==", "user"=>{"email"=>"emmanuellekamwa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "emmanuellekamwa@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (10.9ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2021-01-29 08:16:31.095523"], ["updated_at", "2021-01-29 08:16:31.096173"], ["id", 1]]
+  [1m[35m (37.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 979ms (ActiveRecord: 48.9ms | Allocations: 11131)
+
+
+Started GET "/" for 127.0.0.1 at 2021-01-29 09:16:31 +0100
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (4.2ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:12
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:17
+  Rendered links/index.html.erb within layouts/application (Duration: 177.2ms | Allocations: 8303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 279ms (Views: 246.8ms | ActiveRecord: 31.0ms | Allocations: 16437)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:16:35 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_30580 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5237.9ms | Allocations: 343055)
+Completed 500 Internal Server Error in 5269ms (ActiveRecord: 0.4ms | Allocations: 345040)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000558a55a36800>:0x00007f87841e8800>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:26:12 +0100
+  [1m[35m (89.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_32040 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 6735.9ms | Allocations: 174289)
+Completed 500 Internal Server Error in 9226ms (ActiveRecord: 6.6ms | Allocations: 177493)
+
+
+  
+ActionView::Template::Error (undefined method `form_label' for #<#<Class:0x0000558a55b5d7d8>:0x0000558a55b41ec0>
+Did you mean?  form_tag):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= form_label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:27:46 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_32640 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 1941.6ms | Allocations: 173556)
+Completed 500 Internal Server Error in 1977ms (ActiveRecord: 4.3ms | Allocations: 176727)
+
+
+  
+ActionView::Template::Error (undefined method `name_path' for #<#<Class:0x0000558a56190060>:0x0000558a5618e0f8>
+Did you mean?  image_path):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= form_tag :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:28:26 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_33220 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 74.5ms | Allocations: 2470)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.3ms | Allocations: 5641)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= form_tag :image %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 09:28:54 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_33760 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4038.5ms | Allocations: 343173)
+Completed 500 Internal Server Error in 4081ms (ActiveRecord: 4.3ms | Allocations: 346344)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f878453c768>:0x00007f87845167e8>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 11:13:20 +0100
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 505.5ms | Allocations: 1258)
+Completed 500 Internal Server Error in 2773ms (ActiveRecord: 8.4ms | Allocations: 4462)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="panel panel-default">
+  <div class="panel-body"><div class="form-inputs"><div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control", :autofocus => true %>
+    </div><div class="form-group">
+      <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+      <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
+    </div><div class="form-group">
+      <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+      <%= f.password_field :current_password, class: "form-control" %>
+    </div></div><div class="form-group">
+      <%= f.submit "Update", class: "btn btn-primary" %>
+    </div><% end %>
+</div>
+<div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+<div class="form-group">
+        <%= f.label :name 'Your name'%>
+        <%= f.text_field :name, class: "form-control", :autofocus => true %>
+</div>
+):
+1:    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+4:      <%= devise_error_messages! %>
+5:    
+6:      <div class="panel panel-default">
+7:      <div class="panel-body"><div class="form-inputs"><div class="form-group">
+8:          <%= f.label :email %>
+9:          <%= f.email_field :email, class: "form-control", :autofocus => true %>
+10:        </div><div class="form-group">
+11:          <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+12:          <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
+13:        </div><div class="form-group">
+14:          <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+15:          <%= f.password_field :current_password, class: "form-control" %>
+16:        </div></div><div class="form-group">
+17:          <%= f.submit "Update", class: "btn btn-primary" %>
+18:        </div><% end %>
+19:    </div>
+20:    <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+21:    <div class="form-group">
+22:            <%= f.label :name 'Your name'%>
+23:            <%= f.text_field :name, class: "form-control", :autofocus => true %>
+24:    </div>
+  
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+app/views/devise/registrations/edit.html.erb:22: syntax error, unexpected string literal, expecting ')'
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 11:14:01 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_34980 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 13760.8ms | Allocations: 343196)
+Completed 500 Internal Server Error in 13806ms (ActiveRecord: 0.4ms | Allocations: 346367)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000558a561e35a8>:0x0000558a561e1028>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name, 'Your name'%>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 11:14:53 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_35560 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3772.8ms | Allocations: 343172)
+Completed 500 Internal Server Error in 3808ms (ActiveRecord: 0.5ms | Allocations: 346343)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000558a561a0a00>:0x0000558a5619dc38>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-01-29 13:46:54 +0100
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (35.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb___478274170399287155_35560 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 9363.0ms | Allocations: 342852)
+Completed 500 Internal Server Error in 10844ms (ActiveRecord: 35.2ms | Allocations: 344864)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x0000558a561a0a00>:0x0000558a54c00d80>):
+    19: </div>
+    20: <div class="panel-footer"><h3>Cancel my account</h3><p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p></div>
+    21: <div class="form-group">
+    22:         <%= f.label :name %>
+    23:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    24: </div>
+  
+app/views/devise/registrations/edit.html.erb:22
+Started GET "/users/edit" for 127.0.0.1 at 2021-02-01 08:54:43 +0100
+  [1m[35m (3878.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb__1338983155712319953_29700 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11804.4ms | Allocations: 341381)
+Completed 500 Internal Server Error in 13283ms (ActiveRecord: 2.5ms | Allocations: 351205)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007faacc4836d0>:0x00007faacc481c68>):
+    40: </div>
+    41: 
+    42: <div class="form-group">
+    43:         <%= f.label :name %>
+    44:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    45: </div>
+  
+app/views/devise/registrations/edit.html.erb:43
+Started GET "/users/edit" for 127.0.0.1 at 2021-02-01 09:02:02 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb__1338983155712319953_30460 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 37.8ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1427ms (Views: 1409.2ms | ActiveRecord: 0.4ms | Allocations: 24146)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2021-02-01 09:17:28 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper#devise_error_messages!` is deprecated and will be
+removed in the next major version.
+
+Devise now uses a partial under "devise/shared/error_messages" to display
+error messages by default, and make them easier to customize. Update your
+views changing calls from:
+
+    <%= devise_error_messages! %>
+
+to:
+
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+To start customizing how errors are displayed, you can copy the partial
+from devise to your `app/views` folder. Alternatively, you can run
+`rails g devise:views` which will copy all of them again to your app.
+ (called from block in _app_views_devise_registrations_edit_html_erb__1338983155712319953_40760 at /home/kamwa/micro-reddit/app/views/devise/registrations/edit.html.erb:4)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3858.3ms | Allocations: 343162)
+Completed 500 Internal Server Error in 4038ms (ActiveRecord: 1.0ms | Allocations: 351020)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007faacc140d88>:0x00007faacc13b388>):
+    40: </div>
+    41: 
+    42: <div class="form-group">
+    43:         <%= f.label :name %>
+    44:         <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    45: </div>
+  
+app/views/devise/registrations/edit.html.erb:43
