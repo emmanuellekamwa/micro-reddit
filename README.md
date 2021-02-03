@@ -7,6 +7,16 @@ The aim of this project was to build a clone of the application Reddit called mi
 - Ruby on Rails
 - Rubocop
 
+# Getting Started
+
+- Clone the repository
+- After cloning browse into the project directory
+- Run bundle install
+- Enter into the rails console by running rails console
+- Run Post.create to create a new post
+- Run User.create to create a new user
+- Run Comment.create to create a new comment
+
 # Author
 
 - Github: @emmanuellekamwa
