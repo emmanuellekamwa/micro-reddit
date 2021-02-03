@@ -24,11 +24,11 @@ class CommentsController < ApplicationController
     @link = Link.find(params[:link_id])
     @comment = @link.comments.new(comment_params)
     @comment.user = current_user
-      if @comment.save
-        redirect_to @link, notice: 'Comment was successfully created.' 
-      else
-        format.html {render action: 'new'}
-      end
+    if @comment.save
+      redirect_to @link, notice: 'Comment was successfully created.'
+    else
+      format.html { render action: 'new' }
+    end
   end
 
   # PATCH/PUT /comments/1
