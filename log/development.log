@@ -5565,3 +5565,80 @@ Completed 200 OK in 929ms (Views: 725.3ms | ActiveRecord: 3.7ms | Allocations: 2
 Completed 200 OK in 1400ms (Views: 887.7ms | ActiveRecord: 338.0ms | Allocations: 42746)
 
 
+Started GET "/" for 127.0.0.1 at 2021-02-03 16:08:59 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (1.4ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (21.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (22.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 452.0ms | Allocations: 22562)
+Completed 500 Internal Server Error in 806ms (ActiveRecord: 69.9ms | Allocations: 32056)
+
+
+  
+ActionView::Template::Error (Error: media query expression must begin with '('
+        on line 19:3 of app/assets/stylesheets/application.css.scss
+>>   @import "bootstrap"
+
+   --^
+):
+    2: <html>
+    3:   <head>
+    4:     <title>Raddit</title>
+    5:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:     <%= csrf_meta_tags %>
+    8:   </head>
+  
+app/assets/stylesheets/application.css.scss:19
+app/views/layouts/application.html.erb:5
+Started GET "/" for 127.0.0.1 at 2021-02-03 16:23:32 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LinksController#index as HTML
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (0.5ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 129.8ms | Allocations: 8359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 4892ms (Views: 4883.5ms | ActiveRecord: 7.2ms | Allocations: 105214)
+
+
