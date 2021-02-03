@@ -5372,3 +5372,196 @@ Processing by LinksController#index as HTML
 Completed 200 OK in 460ms (Views: 404.3ms | ActiveRecord: 30.2ms | Allocations: 27291)
 
 
+Started GET "/comments" for 127.0.0.1 at 2021-02-03 12:32:32 +0100
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  [1m[36mComment Load (16.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/views/comments/index.html.erb:16
+  Rendered comments/index.html.erb within layouts/application (Duration: 85.9ms | Allocations: 4908)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 605ms (Views: 506.3ms | ActiveRecord: 21.4ms | Allocations: 34064)
+
+
+Started GET "/comments/new" for 127.0.0.1 at 2021-02-03 12:32:37 +0100
+Processing by CommentsController#new as HTML
+  Rendering comments/new.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 278.4ms | Allocations: 3491)
+  Rendered comments/new.html.erb within layouts/application (Duration: 295.3ms | Allocations: 3827)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 402ms (Views: 390.6ms | ActiveRecord: 0.2ms | Allocations: 12115)
+
+
+Started POST "/comments" for 127.0.0.1 at 2021-02-03 12:32:40 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"0fW7nVwJicLNXMlQwCqyktZna/OZGGv6w04xyrJBYU9rIpPYrHgQGffATBxjDbULnzUYPkZNrkCP1xfQC7IoJg==", "comment"=>{"link_id"=>"", "body"=>"", "user_id"=>""}, "commit"=>"Create Comment"}
+Completed 404 Not Found in 92ms (ActiveRecord: 6.5ms | Allocations: 3143)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Link without an ID):
+  
+app/controllers/comments_controller.rb:24:in `create'
+Started POST "/comments" for 127.0.0.1 at 2021-02-03 12:32:53 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"0fW7nVwJicLNXMlQwCqyktZna/OZGGv6w04xyrJBYU9rIpPYrHgQGffATBxjDbULnzUYPkZNrkCP1xfQC7IoJg==", "comment"=>{"link_id"=>"", "body"=>"", "user_id"=>""}, "commit"=>"Create Comment"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 735)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Link without an ID):
+  
+app/controllers/comments_controller.rb:24:in `create'
+Started POST "/comments" for 127.0.0.1 at 2021-02-03 12:34:29 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"0fW7nVwJicLNXMlQwCqyktZna/OZGGv6w04xyrJBYU9rIpPYrHgQGffATBxjDbULnzUYPkZNrkCP1xfQC7IoJg==", "comment"=>{"link_id"=>"", "body"=>"", "user_id"=>""}, "commit"=>"Create Comment"}
+Completed 404 Not Found in 71ms (ActiveRecord: 5.8ms | Allocations: 4414)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Link without an ID):
+  
+app/controllers/comments_controller.rb:24:in `create'
+Started GET "/comments/1/edit" for 127.0.0.1 at 2021-02-03 12:34:50 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:62:in `set_comment'
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 31.4ms | Allocations: 3618)
+  Rendered comments/edit.html.erb within layouts/application (Duration: 55.3ms | Allocations: 4001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 558ms (Views: 413.1ms | ActiveRecord: 11.6ms | Allocations: 38478)
+
+
+Started PATCH "/comments/1" for 127.0.0.1 at 2021-02-03 12:35:01 +0100
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for CommentsController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/comments/1/edit" for 127.0.0.1 at 2021-02-03 13:30:24 +0100
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/comments/1/edit" for 127.0.0.1 at 2021-02-03 13:30:44 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (30.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:62:in `set_comment'
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 461.2ms | Allocations: 970)
+  Rendered comments/edit.html.erb within layouts/application (Duration: 567.3ms | Allocations: 1086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 4085ms (Views: 2192.1ms | ActiveRecord: 42.0ms | Allocations: 18925)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for 127.0.0.1 at 2021-02-03 13:30:53 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CommentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by LinksController#index as HTML
+  ↳ app/controllers/comments_controller.rb:62:in `set_comment'
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 13.7ms | Allocations: 970)
+  Rendered comments/edit.html.erb within layouts/application (Duration: 21.9ms | Allocations: 1181)
+  Rendering links/index.html.erb within layouts/application
+  [1m[36mLink Load (11.0ms)[0m  [1m[34mSELECT "links".* FROM "links"[0m
+  ↳ app/views/links/index.html.erb:1
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+  ↳ app/views/links/index.html.erb:5
+Completed 200 OK in 929ms (Views: 725.3ms | ActiveRecord: 3.7ms | Allocations: 29098)
+
+
+  [1m[35m (308.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 1], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/links/index.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 1]]
+  ↳ app/views/links/index.html.erb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Link"], ["vote_flag", 0]]
+  ↳ app/views/links/index.html.erb:18
+  Rendered links/index.html.erb within layouts/application (Duration: 1102.8ms | Allocations: 27049)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:16
+Completed 200 OK in 1400ms (Views: 887.7ms | ActiveRecord: 338.0ms | Allocations: 42746)
+
+
