@@ -34,11 +34,11 @@
  <%= render :partial => @link.comments %>
 </div>
 
-<%= simple_form_for [@new, Comment.new] do |f| %>
+<%= form_for(@link.comments.new, url: link_comments_path(@link)) do |f| %>
  <div class="field">
   <%= f.text_area :body, class: "form-control" %>
  </div>
- 
+
  <br>
  <%= f.submit "Add Comment", class: "btn btn-primary" %>
 <% end %>

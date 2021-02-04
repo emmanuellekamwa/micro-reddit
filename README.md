@@ -1,24 +1,36 @@
-# README
+# Building with Active Record
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The aim of this project was to build a clone of the application Reddit called micro-reddit with our knowledge of active record so that the clone can create a post and add comments to it.
 
-Things you may want to cover:
+# Built with
 
-* Ruby version
+- Ruby on Rails
+- Rubocop
 
-* System dependencies
+# Getting Started
 
-* Configuration
+- Clone the repository
+- After cloning browse into the project directory
+- Run bundle install
+- Enter into the rails console by running rails console
+- Run Post.create to create a new post
+- Run User.create to create a new user
+- Run Comment.create to create a new comment
 
-* Database creation
+# Author
 
-* Database initialization
+- Github: @emmanuellekamwa
+- Twitter: @AlixKamwa
+- Linkedin: emmanuelle-kamwa-86145a1a4
 
-* How to run the test suite
+# Contribution
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions, issues and featur requests are highly welcomed!
 
-* Deployment instructions
+# Show some support
 
-* ...
+Give a star if you have liked my project and your comments are highly accepted.
+
+# License
+
+This project is MIT licensed.
